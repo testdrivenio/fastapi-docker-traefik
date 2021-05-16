@@ -22,6 +22,6 @@ async def startup():
 
 
 @app.on_event("shutdown")
-async def startup():
+async def shutdown():
     if database.is_connected:
         await database.disconnect()

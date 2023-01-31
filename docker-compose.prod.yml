@@ -19,7 +19,7 @@ services:
       - "traefik.http.routers.fastapi.tls=true"
       - "traefik.http.routers.fastapi.tls.certresolver=letsencrypt"
   db:
-    image: postgres:13-alpine
+    image: postgres:15.1-alpine
     volumes:
       - postgres_data_prod:/var/lib/postgresql/data/
     expose:

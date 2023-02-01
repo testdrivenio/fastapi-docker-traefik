@@ -18,7 +18,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.fastapi.rule=Host(`fastapi.localhost`)"
   db:
-    image: postgres:13-alpine
+    image: postgres:15.1-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     expose:
@@ -28,7 +28,7 @@ services:
       - POSTGRES_PASSWORD=fastapi_traefik
       - POSTGRES_DB=fastapi_traefik
   traefik:
-    image: traefik:v2.2
+    image: traefik:v2.9.6
     ports:
       - 8008:80
       - 8081:8080

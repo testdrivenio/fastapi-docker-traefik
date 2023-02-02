@@ -1,5 +1,3 @@
-# app/db.py
-
 import databases
 import ormar
 import sqlalchemy

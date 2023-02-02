@@ -1,5 +1,3 @@
-# traefik.prod.toml
-
 [entryPoints]
   [entryPoints.web]
     address = ":80"
